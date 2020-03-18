@@ -1,0 +1,30 @@
+﻿@model List<Book>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="tester">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div class="container">
+    @foreach(Book b in Model)
+    {
+       <div class="row">
+            <div class="col-md-2">@b.ISBN</div>
+            <div class="col-md-2">@b.Title</div>
+            <div class="col-md-2">@b.Author</div>
+            <div class="col-md-2">@b.Language</div>
+            <div class="col-md-2">@b.Publisher.Name</div>
+       </div>
+    }
+    </div>
+</div>
+
+
+@section Scripts {
+
+    <script type="text/javascript">
+
+
+    </script>
+}
